@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <!-- 修改后的侧栏 -->
+    <div class="sidebar glass-effect">
+        <div class="sidebar-toggle">
+            <i class="fas fa-folder"></i>
+            <span>文件下载</span>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#" class="sidebar-link" data-folder="cv">
+                        <i class="fas fa-file-alt"></i>
+                        <span>个人简历</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link" data-folder="grades">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>成绩单</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link" data-folder="awards">
+                        <i class="fas fa-trophy"></i>
+                        <span>获奖证书</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 文件列表弹窗 -->
+    <div id="fileModal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">文件列表</h2>
+            <div id="fileList" class="file-list">
+                <!-- 文件列表将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+    
+    <header class="glass-effect">
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="glass-effect">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="https://via.placeholder.com/150" alt="个人照片">
+                </div>
+                <h1 class="typing-effect">你的名字</h1>
+                <p class="subtitle">职业头衔 | 专业领域</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="glass-effect">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <p>这里是关于你的详细介绍。可以包含你的教育背景、工作经历、兴趣爱好等。</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="number">5+</span>
+                        <span class="label">年工作经验</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">20+</span>
+                        <span class="label">完成项目</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">100+</span>
+                        <span class="label">客户好评</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="glass-effect">
+            <h2>专业技能</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>前端开发</h3>
+                    <div class="skill-item">
+                        <span>HTML/CSS</span>
+                        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>后端开发</h3>
+                    <div class="skill-item">
+                        <span>Python</span>
+                        <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Node.js</span>
+                        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="glass-effect">
+            <h2>项目展示</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="项目预览">
+                    <h3>项目名称 1</h3>
+                    <p>项目描述，使用的技术栈和实现的功能等。</p>
+                    <div class="project-links">
+                        <a href="#" class="button">查看演示</a>
+                        <a href="#" class="button">源代码</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="项目预览">
+                    <h3>项目名称 2</h3>
+                    <p>项目描述，使用的技术栈和实现的功能等。</p>
+                    <div class="project-links">
+                        <a href="#" class="button">查看演示</a>
+                        <a href="#" class="button">源代码</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="glass-effect">
+            <h2>联系我</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="您的姓名" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="您的邮箱" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="您的留言" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">发送消息</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="glass-effect">
+        <p>&copy; 2024 你的名字. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
